@@ -1,4 +1,17 @@
-html {
-		overflow-x: hidden;
-		overflow-y: hidden;
-	}
+.province_GD{
+	fill-opacity:0.2;
+	fill:transparent;
+	stroke:#333;
+	fill-rule:evenodd;
+	stroke-linecap:round;
+	stroke-linejoin:round;
+}
+.colorChange{
+	fill-opacity:0.2;
+	fill:transparent;
+	stroke-dasharray:1,6;
+	stroke:#999;
+	fill-rule:evenodd;
+	stroke-linecap:round;
+	stroke-linejoin:round;
+}

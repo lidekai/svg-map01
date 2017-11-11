@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	/*自适应*/
 	function adjustToFreezeWidth() {
     var windowWidth = $(window).width();
@@ -13,25 +14,27 @@ $(document).ready(function(){
     $("#GDS").setAttribute("width", setWidth);
     $("#GDS").setAttribute("height", setHeight);
     }
+
 	/*数据回填*/
 	$(".province_GD").attr("d",map.province.path);
 	for(var i=0;i<map.province.city.length;i++){
 	   $(".city_"+i).attr("d",cityPath=map.province.city[i].path);
 	}
+
     /*鼠标移入移出样式改变*/
     $(".colorChange").mouseover(function () {//移入
-      $(this).attr({
+      $(this).removeClass("stroke-dasharray");
+      $(this).css({
                     "stroke":"#099",
                     "fill":"#099"
                     });
-      $(this).removeAttr("stroke-dasharray");
      });
     $(".colorChange").mouseout(function () {//移出
-            $(this).attr({
+            $(this).css({
                             "stroke":"#999",
-                            "fill":"transparent"
+                            "fill":"transparent",
+                            "stroke-dasharray":"1,6"
                         });
-      $(this).attr("stroke-dasharray","1,6");
      });
 
 })
