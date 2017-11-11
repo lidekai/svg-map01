@@ -2,17 +2,15 @@ $(document).ready(function(){
 
 	/*自适应*/
 	function adjustToFreezeWidth() {
-    var windowWidth = $(window).width();
+    var viewBoxVal = $(".GDS").getAttribute("viewBox");
+    var setWidth = $(window).width();
 
-    var viewBoxVal = $("#GDS").getAttribute("viewBox");
     var viewBoxWidth = viewBoxVal.split(",")[2];
     var viewBoxHeight = viewBoxVal.split(",")[3];
-    $("#GDS").removeAttribute("width");
-    $("#GDS").removeAttribute("height");
-    var setWidth = windowWidth;
+
     var setHeight = (setWidth * viewBoxHeight) / viewBoxWidth;
-    $("#GDS").setAttribute("width", setWidth);
-    $("#GDS").setAttribute("height", setHeight);
+    $(".GDS").setAttribute("width", setWidth);
+    $(".GDS").setAttribute("height", setHeight);
     }
 
 	/*数据回填*/
