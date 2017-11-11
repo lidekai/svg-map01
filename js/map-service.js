@@ -14,9 +14,9 @@ $(document).ready(function(){
     }
 
 	/*数据回填*/
-	$(".province_GD").attr("d",map.province.path);
+	$(".province-GD").attr("d",map.province.path);
 	for(var i=0;i<map.province.city.length;i++){
-	   $(".city_"+i).attr("d",cityPath=map.province.city[i].path);
+	   $(".city-"+i).attr("d",cityPath=map.province.city[i].path);
 	}
 
     /*鼠标移入移出样式改变*/
